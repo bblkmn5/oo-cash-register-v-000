@@ -30,7 +30,7 @@ def apply_discount
   if discount == 0
       "There is no discount to apply."
   else
-    self.total -= ((total * discount.to_f)/100).to_i
+    self.total -= ((total * discount)/100).to_i
       "After the discount, the total comes to $#{self.total}."
   end
 end
@@ -40,6 +40,5 @@ end
 def void_last_transaction
   self.total = self.total - self.last_transaction
 end
-
 
 end

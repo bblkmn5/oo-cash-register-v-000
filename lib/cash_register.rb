@@ -39,6 +39,7 @@ end
 #subtracts the last transaction from the total
 def void_last_transaction
   self.total = self.total - self.last_transaction
+  self.total
 end
 
 

@@ -4,7 +4,7 @@ class CashRegister
 # @total returns the current total
 #sets an instance variable @total on initialization to zero
 #optionally takes an employee discount on initialization
-def initialize(discount = 0)
+def initialize(discount=0)
   @total = 0
   @discount = discount
 #returns an array containing all items that have been added
@@ -14,8 +14,8 @@ end
 #accepts a title and a price and increases the total
 #also accepts an optional quantity
 #doesn't forget about the previous total
-def add_item(title, price, quantity = 1)
-  self.total = self.total + (price * quantity)
+def add_item(title, price, quantity=1)
+  self.total += price * quantity
   quantity.times do
     items << title
   end
